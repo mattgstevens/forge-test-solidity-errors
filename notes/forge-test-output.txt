@@ -1,0 +1,112 @@
+compiling...
+no files changed, compilation skipped.
+Running 7 tests for ContractErrorsTest.json:ContractErrorsTest
+[31m[FAIL. Reason: NoArgs()][0m testErrorSolidity() (gas: 962)
+Traces:
+
+  [484124] [32mContractErrorsTest[0m::[32msetUp[0m()
+    ├─ [33m→ new[0m Utilities@0xce71…c246
+    │   └─ [32m←[0m 1137 bytes of code
+    ├─ [33m→ new[0m ContractErrors@0x185a…1aea
+    │   └─ [32m←[0m 624 bytes of code
+    └─ [32m←[0m ()
+  [962] [31mContractErrorsTest[0m::[31mtestErrorSolidity[0m()
+    ├─ [274] [31mContractErrors[0m::[31merrorSolidity[0m()
+    │   └─ [31m←[0m "NoArgs()"
+    └─ [31m←[0m "NoArgs()"
+
+[31m[FAIL. Reason: WithArgs(123456)][0m testErrorSolidityArgsLong() (gas: 954)
+Traces:
+
+  [484124] [32mContractErrorsTest[0m::[32msetUp[0m()
+    ├─ [33m→ new[0m Utilities@0xce71…c246
+    │   └─ [32m←[0m 1137 bytes of code
+    ├─ [33m→ new[0m ContractErrors@0x185a…1aea
+    │   └─ [32m←[0m 624 bytes of code
+    └─ [32m←[0m ()
+  [954] [31mContractErrorsTest[0m::[31mtestErrorSolidityArgsLong[0m()
+    ├─ [263] [31mContractErrors[0m::[31merrorSolidityArgs[0m(123456)
+    │   └─ [31m←[0m "WithArgs(123456)"
+    └─ [31m←[0m "WithArgs(123456)"
+
+[31m[FAIL. Reason: WithArgs(1)][0m testErrorSolidityArgsShort() (gas: 923)
+Traces:
+
+  [484124] [32mContractErrorsTest[0m::[32msetUp[0m()
+    ├─ [33m→ new[0m Utilities@0xce71…c246
+    │   └─ [32m←[0m 1137 bytes of code
+    ├─ [33m→ new[0m ContractErrors@0x185a…1aea
+    │   └─ [32m←[0m 624 bytes of code
+    └─ [32m←[0m ()
+  [923] [31mContractErrorsTest[0m::[31mtestErrorSolidityArgsShort[0m()
+    ├─ [263] [31mContractErrors[0m::[31merrorSolidityArgs[0m(1)
+    │   └─ [31m←[0m "WithArgs(1)"
+    └─ [31m←[0m "WithArgs(1)"
+
+[31m[FAIL. Reason: ConstantErrorString][0m testErrorStringConstantLong() (gas: 1221)
+Traces:
+
+  [484124] [32mContractErrorsTest[0m::[32msetUp[0m()
+    ├─ [33m→ new[0m Utilities@0xce71…c246
+    │   └─ [32m←[0m 1137 bytes of code
+    ├─ [33m→ new[0m ContractErrors@0x185a…1aea
+    │   └─ [32m←[0m 624 bytes of code
+    └─ [32m←[0m ()
+  [1221] [31mContractErrorsTest[0m::[31mtestErrorStringConstantLong[0m()
+    ├─ [568] [31mContractErrors[0m::[31merrorStringConstantLong[0m()
+    │   └─ [31m←[0m "ConstantErrorString"
+    └─ [31m←[0m "ConstantErrorString"
+
+[31m[FAIL. Reason: E][0m testErrorStringConstantShort() (gas: 1200)
+Traces:
+
+  [484124] [32mContractErrorsTest[0m::[32msetUp[0m()
+    ├─ [33m→ new[0m Utilities@0xce71…c246
+    │   └─ [32m←[0m 1137 bytes of code
+    ├─ [33m→ new[0m ContractErrors@0x185a…1aea
+    │   └─ [32m←[0m 624 bytes of code
+    └─ [32m←[0m ()
+  [1200] [31mContractErrorsTest[0m::[31mtestErrorStringConstantShort[0m()
+    ├─ [524] [31mContractErrors[0m::[31merrorStringConstantShort[0m()
+    │   └─ [31m←[0m "E"
+    └─ [31m←[0m "E"
+
+[31m[FAIL. Reason: ThisIsAVeryDescriptiveError][0m testErrorStringLong() (gas: 972)
+Traces:
+
+  [484124] [32mContractErrorsTest[0m::[32msetUp[0m()
+    ├─ [33m→ new[0m Utilities@0xce71…c246
+    │   └─ [32m←[0m 1137 bytes of code
+    ├─ [33m→ new[0m ContractErrors@0x185a…1aea
+    │   └─ [32m←[0m 624 bytes of code
+    └─ [32m←[0m ()
+  [972] [31mContractErrorsTest[0m::[31mtestErrorStringLong[0m()
+    ├─ [274] [31mContractErrors[0m::[31merrorStringLong[0m()
+    │   └─ [31m←[0m "ThisIsAVeryDescriptiveError"
+    └─ [31m←[0m "ThisIsAVeryDescriptiveError"
+
+[31m[FAIL. Reason: ErrorString][0m testErrorStringShort() (gas: 1043)
+Traces:
+
+  [484124] [32mContractErrorsTest[0m::[32msetUp[0m()
+    ├─ [33m→ new[0m Utilities@0xce71…c246
+    │   └─ [32m←[0m 1137 bytes of code
+    ├─ [33m→ new[0m ContractErrors@0x185a…1aea
+    │   └─ [32m←[0m 624 bytes of code
+    └─ [32m←[0m ()
+  [1043] [31mContractErrorsTest[0m::[31mtestErrorStringShort[0m()
+    ├─ [324] [31mContractErrors[0m::[31merrorStringShort[0m()
+    │   └─ [31m←[0m "ErrorString"
+    └─ [31m←[0m "ErrorString"
+
+
+Failed tests:
+[31m[FAIL. Reason: NoArgs()][0m testErrorSolidity() (gas: 962)
+[31m[FAIL. Reason: WithArgs(123456)][0m testErrorSolidityArgsLong() (gas: 954)
+[31m[FAIL. Reason: WithArgs(1)][0m testErrorSolidityArgsShort() (gas: 923)
+[31m[FAIL. Reason: ConstantErrorString][0m testErrorStringConstantLong() (gas: 1221)
+[31m[FAIL. Reason: E][0m testErrorStringConstantShort() (gas: 1200)
+[31m[FAIL. Reason: ThisIsAVeryDescriptiveError][0m testErrorStringLong() (gas: 972)
+[31m[FAIL. Reason: ErrorString][0m testErrorStringShort() (gas: 1043)
+
+Encountered a total of [31m7[0m failing tests, [32m0[0m tests succeeded

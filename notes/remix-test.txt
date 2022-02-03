@@ -1,0 +1,52 @@
+# note
+- ran on remix with solc version 0.8.7
+- first value no opts, second opts on 200 run (default value)
+
+## testErrorSolidity
+to  ContractErrors.errorSolidity() 0xd9145CCE52D386f254917e481eB44e9943F39138
+transaction cost  21_332 gas
+
+to  ContractErrors.errorSolidity() 0xd2a5bC10698FD955D1Fe6cb468a17809A08fd005
+transaction cost  21_338 gas 
+
+## testErrorSolidityArgsLong
+to  ContractErrors.errorSolidityArgs(uint256) 0xd9145CCE52D386f254917e481eB44e9943F39138
+transaction cost  21_801 gas 
+
+to  ContractErrors.errorSolidityArgs(uint256) 0xd2a5bC10698FD955D1Fe6cb468a17809A08fd005
+transaction cost  21_491 gas 
+
+## testErrorSolidityArgsShort
+to  ContractErrors.errorSolidityArgs(uint256) 0xd9145CCE52D386f254917e481eB44e9943F39138
+transaction cost  21_777 gas 
+
+to  ContractErrors.errorSolidityArgs(uint256) 0xd2a5bC10698FD955D1Fe6cb468a17809A08fd005
+transaction cost  21_467 gas 
+
+## testErrorStringConstantLong
+to  ContractErrors.errorStringConstantLong() 0xd9145CCE52D386f254917e481eB44e9943F39138
+transaction cost  21_866 gas 
+
+to  ContractErrors.errorStringConstantLong() 0xd2a5bC10698FD955D1Fe6cb468a17809A08fd005
+transaction cost  21_632 gas 
+
+## testErrorStringConstantShort
+to  ContractErrors.errorStringConstantShort() 0xd9145CCE52D386f254917e481eB44e9943F39138
+transaction cost  21_822 gas 
+
+to  ContractErrors.errorStringConstantShort() 0xd2a5bC10698FD955D1Fe6cb468a17809A08fd005
+transaction cost  21_588 gas 
+
+## testErrorStringLong
+to  ContractErrors.errorStringLong() 0xd9145CCE52D386f254917e481eB44e9943F39138
+transaction cost  21_520 gas 
+
+to  ContractErrors.errorStringLong() 0xd2a5bC10698FD955D1Fe6cb468a17809A08fd005
+transaction cost  21_338 gas
+
+## testErrorStringShort
+to  ContractErrors.errorStringShort() 0xd9145CCE52D386f254917e481eB44e9943F39138
+transaction cost  21_564 gas 
+
+to  ContractErrors.errorStringShort() 0xd2a5bC10698FD955D1Fe6cb468a17809A08fd005
+transaction cost  21_388 gas
