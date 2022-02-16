@@ -5,8 +5,7 @@
 
 - local test command
 
-  - forge test -vvvv > forge-test-output.txt
-  - using `-vvvv` flag to get "trace" output to see called function gas costs
+  - forge test > notes/forge-test-output.txt
 
 - reviewing the trace the gas costs do not match with the remix txs
   - `bat notes/forge-test-output.txt`

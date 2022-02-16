@@ -1,112 +1,107 @@
 compiling...
 no files changed, compilation skipped.
-Running 7 tests for ContractErrorsTest.json:ContractErrorsTest
-[31m[FAIL. Reason: NoArgs()][0m testErrorSolidity() (gas: 962)
+Running 10 tests for ContractErrorsTest.json:ContractErrorsTest
+[32m[PASS][0m testErrorSolidity() (gas: 4195)
 Traces:
 
-  [484124] [32mContractErrorsTest[0m::[32msetUp[0m()
-    ├─ [33m→ new[0m Utilities@0xce71…c246
-    │   └─ [32m←[0m 1137 bytes of code
-    ├─ [33m→ new[0m ContractErrors@0x185a…1aea
-    │   └─ [32m←[0m 624 bytes of code
-    └─ [32m←[0m ()
-  [962] [31mContractErrorsTest[0m::[31mtestErrorSolidity[0m()
-    ├─ [274] [31mContractErrors[0m::[31merrorSolidity[0m()
+  [4195] [32mContractErrorsTest[0m::[32mtestErrorSolidity[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(NoArgs())
+    │   └─ [34m←[0m ()
+    ├─ [230] [31mContractErrors[0m::[31merrorSolidity[0m()
     │   └─ [31m←[0m "NoArgs()"
-    └─ [31m←[0m "NoArgs()"
+    └─ [32m←[0m ()
 
-[31m[FAIL. Reason: WithArgs(123456)][0m testErrorSolidityArgsLong() (gas: 954)
+[32m[PASS][0m testErrorSolidityArgsLong() (gas: 4434)
 Traces:
 
-  [484124] [32mContractErrorsTest[0m::[32msetUp[0m()
-    ├─ [33m→ new[0m Utilities@0xce71…c246
-    │   └─ [32m←[0m 1137 bytes of code
-    ├─ [33m→ new[0m ContractErrors@0x185a…1aea
-    │   └─ [32m←[0m 624 bytes of code
-    └─ [32m←[0m ()
-  [954] [31mContractErrorsTest[0m::[31mtestErrorSolidityArgsLong[0m()
-    ├─ [263] [31mContractErrors[0m::[31merrorSolidityArgs[0m(123456)
+  [4434] [32mContractErrorsTest[0m::[32mtestErrorSolidityArgsLong[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(WithArgs(123456))
+    │   └─ [34m←[0m ()
+    ├─ [286] [31mContractErrors[0m::[31merrorSolidityArgs[0m(123456)
     │   └─ [31m←[0m "WithArgs(123456)"
-    └─ [31m←[0m "WithArgs(123456)"
+    └─ [32m←[0m ()
 
-[31m[FAIL. Reason: WithArgs(1)][0m testErrorSolidityArgsShort() (gas: 923)
+[32m[PASS][0m testErrorSolidityArgsShort() (gas: 4356)
 Traces:
 
-  [484124] [32mContractErrorsTest[0m::[32msetUp[0m()
-    ├─ [33m→ new[0m Utilities@0xce71…c246
-    │   └─ [32m←[0m 1137 bytes of code
-    ├─ [33m→ new[0m ContractErrors@0x185a…1aea
-    │   └─ [32m←[0m 624 bytes of code
-    └─ [32m←[0m ()
-  [923] [31mContractErrorsTest[0m::[31mtestErrorSolidityArgsShort[0m()
-    ├─ [263] [31mContractErrors[0m::[31merrorSolidityArgs[0m(1)
+  [4356] [32mContractErrorsTest[0m::[32mtestErrorSolidityArgsShort[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(WithArgs(1))
+    │   └─ [34m←[0m ()
+    ├─ [286] [31mContractErrors[0m::[31merrorSolidityArgs[0m(1)
     │   └─ [31m←[0m "WithArgs(1)"
-    └─ [31m←[0m "WithArgs(1)"
+    └─ [32m←[0m ()
 
-[31m[FAIL. Reason: ConstantErrorString][0m testErrorStringConstantLong() (gas: 1221)
+[32m[PASS][0m testErrorStringConstantLong() (gas: 4139)
 Traces:
 
-  [484124] [32mContractErrorsTest[0m::[32msetUp[0m()
-    ├─ [33m→ new[0m Utilities@0xce71…c246
-    │   └─ [32m←[0m 1137 bytes of code
-    ├─ [33m→ new[0m ContractErrors@0x185a…1aea
-    │   └─ [32m←[0m 624 bytes of code
-    └─ [32m←[0m ()
-  [1221] [31mContractErrorsTest[0m::[31mtestErrorStringConstantLong[0m()
-    ├─ [568] [31mContractErrors[0m::[31merrorStringConstantLong[0m()
+  [4139] [32mContractErrorsTest[0m::[32mtestErrorStringConstantLong[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(ConstantErrorString)
+    │   └─ [34m←[0m ()
+    ├─ [524] [31mContractErrors[0m::[31merrorStringConstantLong[0m()
     │   └─ [31m←[0m "ConstantErrorString"
-    └─ [31m←[0m "ConstantErrorString"
+    └─ [32m←[0m ()
 
-[31m[FAIL. Reason: E][0m testErrorStringConstantShort() (gas: 1200)
+[32m[PASS][0m testErrorStringConstantShort() (gas: 4491)
 Traces:
 
-  [484124] [32mContractErrorsTest[0m::[32msetUp[0m()
-    ├─ [33m→ new[0m Utilities@0xce71…c246
-    │   └─ [32m←[0m 1137 bytes of code
-    ├─ [33m→ new[0m ContractErrors@0x185a…1aea
-    │   └─ [32m←[0m 624 bytes of code
-    └─ [32m←[0m ()
-  [1200] [31mContractErrorsTest[0m::[31mtestErrorStringConstantShort[0m()
-    ├─ [524] [31mContractErrors[0m::[31merrorStringConstantShort[0m()
+  [4491] [32mContractErrorsTest[0m::[32mtestErrorStringConstantShort[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(E)
+    │   └─ [34m←[0m ()
+    ├─ [547] [31mContractErrors[0m::[31merrorStringConstantShort[0m()
     │   └─ [31m←[0m "E"
-    └─ [31m←[0m "E"
+    └─ [32m←[0m ()
 
-[31m[FAIL. Reason: ThisIsAVeryDescriptiveError][0m testErrorStringLong() (gas: 972)
+[32m[PASS][0m testErrorStringLong() (gas: 3928)
 Traces:
 
-  [484124] [32mContractErrorsTest[0m::[32msetUp[0m()
-    ├─ [33m→ new[0m Utilities@0xce71…c246
-    │   └─ [32m←[0m 1137 bytes of code
-    ├─ [33m→ new[0m ContractErrors@0x185a…1aea
-    │   └─ [32m←[0m 624 bytes of code
-    └─ [32m←[0m ()
-  [972] [31mContractErrorsTest[0m::[31mtestErrorStringLong[0m()
-    ├─ [274] [31mContractErrors[0m::[31merrorStringLong[0m()
+  [3928] [32mContractErrorsTest[0m::[32mtestErrorStringLong[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(ThisIsAVeryDescriptiveError)
+    │   └─ [34m←[0m ()
+    ├─ [319] [31mContractErrors[0m::[31merrorStringLong[0m()
     │   └─ [31m←[0m "ThisIsAVeryDescriptiveError"
-    └─ [31m←[0m "ThisIsAVeryDescriptiveError"
+    └─ [32m←[0m ()
 
-[31m[FAIL. Reason: ErrorString][0m testErrorStringShort() (gas: 1043)
+[32m[PASS][0m testErrorStringShort() (gas: 3894)
 Traces:
 
-  [484124] [32mContractErrorsTest[0m::[32msetUp[0m()
-    ├─ [33m→ new[0m Utilities@0xce71…c246
-    │   └─ [32m←[0m 1137 bytes of code
-    ├─ [33m→ new[0m ContractErrors@0x185a…1aea
-    │   └─ [32m←[0m 624 bytes of code
-    └─ [32m←[0m ()
-  [1043] [31mContractErrorsTest[0m::[31mtestErrorStringShort[0m()
-    ├─ [324] [31mContractErrors[0m::[31merrorStringShort[0m()
+  [3894] [32mContractErrorsTest[0m::[32mtestErrorStringShort[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(ErrorString)
+    │   └─ [34m←[0m ()
+    ├─ [280] [31mContractErrors[0m::[31merrorStringShort[0m()
     │   └─ [31m←[0m "ErrorString"
-    └─ [31m←[0m "ErrorString"
+    └─ [32m←[0m ()
 
+[32m[PASS][0m testParseEmptyRevert() (gas: 58446)
+Traces:
 
-Failed tests:
-[31m[FAIL. Reason: NoArgs()][0m testErrorSolidity() (gas: 962)
-[31m[FAIL. Reason: WithArgs(123456)][0m testErrorSolidityArgsLong() (gas: 954)
-[31m[FAIL. Reason: WithArgs(1)][0m testErrorSolidityArgsShort() (gas: 923)
-[31m[FAIL. Reason: ConstantErrorString][0m testErrorStringConstantLong() (gas: 1221)
-[31m[FAIL. Reason: E][0m testErrorStringConstantShort() (gas: 1200)
-[31m[FAIL. Reason: ThisIsAVeryDescriptiveError][0m testErrorStringLong() (gas: 972)
-[31m[FAIL. Reason: ErrorString][0m testErrorStringShort() (gas: 1043)
+  [58450] [32mContractErrorsTest[0m::[32mtestParseEmptyRevert[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(0x)
+    │   └─ [34m←[0m ()
+    ├─ [54572] [31mContractErrors[0m::[31mparseErrorEmptyRevert[0m()
+    │   ├─ [33m→ new[0m Reverted@0x9cc6…0067
+    │   │   └─ [32m←[0m 108 bytes of code
+    │   ├─ [107] [31mReverted[0m::[31memptyRevert[0m()
+    │   │   └─ [31m←[0m ()
+    │   └─ [31m←[0m ()
+    └─ [32m←[0m ()
 
-Encountered a total of [31m7[0m failing tests, [32m0[0m tests succeeded
+[32m[PASS][0m testParseErrorWhenCustomError() (gas: 6082)
+Traces:
+
+  [6082] [32mContractErrorsTest[0m::[32mtestParseErrorWhenCustomError[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(0xfc7aa0270000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000232900000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000003424647000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000047369646500000000000000000000000000000000000000000000000000000000)
+    │   └─ [34m←[0m ()
+    ├─ [689] [31mContractErrors[0m::[31mparseError[0m(0xfc7aa0270000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000232900000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000003424647000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000047369646500000000000000000000000000000000000000000000000000000000)
+    │   └─ [31m←[0m 0xfc7aa0270000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000232900000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000003424647000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000047369646500000000000000000000000000000000000000000000000000000000
+    └─ [32m←[0m ()
+
+[32m[PASS][0m testParseErrorWhenString() (gas: 5876)
+Traces:
+
+  [5876] [32mContractErrorsTest[0m::[32mtestParseErrorWhenString[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(PEW: lasers)
+    │   └─ [34m←[0m ()
+    ├─ [665] [31mContractErrors[0m::[31mparseError[0m(0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000b5045573a206c6173657273000000000000000000000000000000000000000000)
+    │   └─ [31m←[0m "PEW: lasers"
+    └─ [32m←[0m ()
+
