@@ -1,107 +1,165 @@
 compiling...
 no files changed, compilation skipped.
-Running 10 tests for ContractErrorsTest.json:ContractErrorsTest
-[32m[PASS][0m testErrorSolidity() (gas: 4195)
+Running 15 tests for ContractErrorsTest.json:ContractErrorsTest
+[32m[PASS][0m testCallWithCustomError() (gas: 95466)
 Traces:
 
-  [4195] [32mContractErrorsTest[0m::[32mtestErrorSolidity[0m()
-    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(NoArgs())
+  [95466] [32mContractErrorsTest[0m::[32mtestCallWithCustomError[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(CrashBoomBang())
     │   └─ [34m←[0m ()
-    ├─ [230] [31mContractErrors[0m::[31merrorSolidity[0m()
-    │   └─ [31m←[0m "NoArgs()"
+    ├─ [91471] [31mContractErrors[0m::[31mcallWithCustomError[0m()
+    │   ├─ [33m→ new[0m Reverted@0x9cc6…0067
+    │   │   └─ [32m←[0m 291 bytes of code
+    │   ├─ [230] [31mReverted[0m::[31mcustomError[0m()
+    │   │   └─ [31m←[0m "CrashBoomBang()"
+    │   └─ [31m←[0m "CrashBoomBang()"
     └─ [32m←[0m ()
 
-[32m[PASS][0m testErrorSolidityArgsLong() (gas: 4434)
+[32m[PASS][0m testCallWithEmptyRevert() (gas: 95057)
 Traces:
 
-  [4434] [32mContractErrorsTest[0m::[32mtestErrorSolidityArgsLong[0m()
-    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(WithArgs(123456))
-    │   └─ [34m←[0m ()
-    ├─ [286] [31mContractErrors[0m::[31merrorSolidityArgs[0m(123456)
-    │   └─ [31m←[0m "WithArgs(123456)"
-    └─ [32m←[0m ()
-
-[32m[PASS][0m testErrorSolidityArgsShort() (gas: 4356)
-Traces:
-
-  [4356] [32mContractErrorsTest[0m::[32mtestErrorSolidityArgsShort[0m()
-    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(WithArgs(1))
-    │   └─ [34m←[0m ()
-    ├─ [286] [31mContractErrors[0m::[31merrorSolidityArgs[0m(1)
-    │   └─ [31m←[0m "WithArgs(1)"
-    └─ [32m←[0m ()
-
-[32m[PASS][0m testErrorStringConstantLong() (gas: 4139)
-Traces:
-
-  [4139] [32mContractErrorsTest[0m::[32mtestErrorStringConstantLong[0m()
-    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(ConstantErrorString)
-    │   └─ [34m←[0m ()
-    ├─ [524] [31mContractErrors[0m::[31merrorStringConstantLong[0m()
-    │   └─ [31m←[0m "ConstantErrorString"
-    └─ [32m←[0m ()
-
-[32m[PASS][0m testErrorStringConstantShort() (gas: 4491)
-Traces:
-
-  [4491] [32mContractErrorsTest[0m::[32mtestErrorStringConstantShort[0m()
-    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(E)
-    │   └─ [34m←[0m ()
-    ├─ [547] [31mContractErrors[0m::[31merrorStringConstantShort[0m()
-    │   └─ [31m←[0m "E"
-    └─ [32m←[0m ()
-
-[32m[PASS][0m testErrorStringLong() (gas: 3928)
-Traces:
-
-  [3928] [32mContractErrorsTest[0m::[32mtestErrorStringLong[0m()
-    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(ThisIsAVeryDescriptiveError)
-    │   └─ [34m←[0m ()
-    ├─ [319] [31mContractErrors[0m::[31merrorStringLong[0m()
-    │   └─ [31m←[0m "ThisIsAVeryDescriptiveError"
-    └─ [32m←[0m ()
-
-[32m[PASS][0m testErrorStringShort() (gas: 3894)
-Traces:
-
-  [3894] [32mContractErrorsTest[0m::[32mtestErrorStringShort[0m()
-    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(ErrorString)
-    │   └─ [34m←[0m ()
-    ├─ [280] [31mContractErrors[0m::[31merrorStringShort[0m()
-    │   └─ [31m←[0m "ErrorString"
-    └─ [32m←[0m ()
-
-[32m[PASS][0m testParseEmptyRevert() (gas: 58446)
-Traces:
-
-  [58450] [32mContractErrorsTest[0m::[32mtestParseEmptyRevert[0m()
+  [95057] [32mContractErrorsTest[0m::[32mtestCallWithEmptyRevert[0m()
     ├─ [0] [34mVM[0m::[34mexpectRevert[0m(0x)
     │   └─ [34m←[0m ()
-    ├─ [54572] [31mContractErrors[0m::[31mparseErrorEmptyRevert[0m()
+    ├─ [91223] [31mContractErrors[0m::[31mcallWithEmptyRevert[0m()
     │   ├─ [33m→ new[0m Reverted@0x9cc6…0067
-    │   │   └─ [32m←[0m 108 bytes of code
-    │   ├─ [107] [31mReverted[0m::[31memptyRevert[0m()
+    │   │   └─ [32m←[0m 291 bytes of code
+    │   ├─ [129] [31mReverted[0m::[31memptyRevert[0m()
     │   │   └─ [31m←[0m ()
     │   └─ [31m←[0m ()
     └─ [32m←[0m ()
 
-[32m[PASS][0m testParseErrorWhenCustomError() (gas: 6082)
+[32m[PASS][0m testCallWithErrorString() (gas: 96265)
 Traces:
 
-  [6082] [32mContractErrorsTest[0m::[32mtestParseErrorWhenCustomError[0m()
+  [96265] [32mContractErrorsTest[0m::[32mtestCallWithErrorString[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(boom)
+    │   └─ [34m←[0m ()
+    ├─ [91494] [31mContractErrors[0m::[31mcallWithErrorString[0m()
+    │   ├─ [33m→ new[0m Reverted@0x9cc6…0067
+    │   │   └─ [32m←[0m 291 bytes of code
+    │   ├─ [289] [31mReverted[0m::[31merrorString[0m()
+    │   │   └─ [31m←[0m "boom"
+    │   └─ [31m←[0m "boom"
+    └─ [32m←[0m ()
+
+[32m[PASS][0m testCallWithPanic() (gas: 5414)
+Traces:
+
+  [5414] [32mContractErrorsTest[0m::[32mtestCallWithPanic[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(Assertion violated)
+    │   └─ [34m←[0m ()
+    ├─ [608] [31mContractErrors[0m::[31mparseError[0m(0x4e487b710000000000000000000000000000000000000000000000000000000000000001)
+    │   └─ [31m←[0m "Assertion violated"
+    └─ [32m←[0m ()
+
+[32m[PASS][0m testDirectParseErrorWhenCustomError() (gas: 6103)
+Traces:
+
+  [6103] [32mContractErrorsTest[0m::[32mtestDirectParseErrorWhenCustomError[0m()
     ├─ [0] [34mVM[0m::[34mexpectRevert[0m(0xfc7aa0270000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000232900000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000003424647000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000047369646500000000000000000000000000000000000000000000000000000000)
     │   └─ [34m←[0m ()
-    ├─ [689] [31mContractErrors[0m::[31mparseError[0m(0xfc7aa0270000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000232900000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000003424647000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000047369646500000000000000000000000000000000000000000000000000000000)
+    ├─ [644] [31mContractErrors[0m::[31mparseError[0m(0xfc7aa0270000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000232900000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000003424647000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000047369646500000000000000000000000000000000000000000000000000000000)
     │   └─ [31m←[0m 0xfc7aa0270000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000232900000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000003424647000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000047369646500000000000000000000000000000000000000000000000000000000
     └─ [32m←[0m ()
 
-[32m[PASS][0m testParseErrorWhenString() (gas: 5876)
+[32m[PASS][0m testDirectParseErrorWhenEmptyRevert() (gas: 4662)
 Traces:
 
-  [5876] [32mContractErrorsTest[0m::[32mtestParseErrorWhenString[0m()
+  [4662] [32mContractErrorsTest[0m::[32mtestDirectParseErrorWhenEmptyRevert[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(0x)
+    │   └─ [34m←[0m ()
+    ├─ [585] [31mContractErrors[0m::[31mparseError[0m(0x)
+    │   └─ [31m←[0m ()
+    └─ [32m←[0m ()
+
+[32m[PASS][0m testDirectParseErrorWhenPanic() (gas: 5438)
+Traces:
+
+  [5438] [32mContractErrorsTest[0m::[32mtestDirectParseErrorWhenPanic[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(Assertion violated)
+    │   └─ [34m←[0m ()
+    ├─ [608] [31mContractErrors[0m::[31mparseError[0m(0x4e487b710000000000000000000000000000000000000000000000000000000000000001)
+    │   └─ [31m←[0m "Assertion violated"
+    └─ [32m←[0m ()
+
+[32m[PASS][0m testDirectParseErrorWhenString() (gas: 5854)
+Traces:
+
+  [5854] [32mContractErrorsTest[0m::[32mtestDirectParseErrorWhenString[0m()
     ├─ [0] [34mVM[0m::[34mexpectRevert[0m(PEW: lasers)
     │   └─ [34m←[0m ()
-    ├─ [665] [31mContractErrors[0m::[31mparseError[0m(0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000b5045573a206c6173657273000000000000000000000000000000000000000000)
+    ├─ [620] [31mContractErrors[0m::[31mparseError[0m(0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000b5045573a206c6173657273000000000000000000000000000000000000000000)
     │   └─ [31m←[0m "PEW: lasers"
+    └─ [32m←[0m ()
+
+[32m[PASS][0m testErrorCustom() (gas: 4175)
+Traces:
+
+  [4175] [32mContractErrorsTest[0m::[32mtestErrorCustom[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(NoArgs())
+    │   └─ [34m←[0m ()
+    ├─ [231] [31mContractErrors[0m::[31merrorCustom[0m()
+    │   └─ [31m←[0m "NoArgs()"
+    └─ [32m←[0m ()
+
+[32m[PASS][0m testErrorCustomArgsLong() (gas: 4423)
+Traces:
+
+  [4423] [32mContractErrorsTest[0m::[32mtestErrorCustomArgsLong[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(WithArgs(123456))
+    │   └─ [34m←[0m ()
+    ├─ [286] [31mContractErrors[0m::[31merrorCustomArgs[0m(123456)
+    │   └─ [31m←[0m "WithArgs(123456)"
+    └─ [32m←[0m ()
+
+[32m[PASS][0m testErrorCustomArgsShort() (gas: 4346)
+Traces:
+
+  [4346] [32mContractErrorsTest[0m::[32mtestErrorCustomArgsShort[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(WithArgs(1))
+    │   └─ [34m←[0m ()
+    ├─ [286] [31mContractErrors[0m::[31merrorCustomArgs[0m(1)
+    │   └─ [31m←[0m "WithArgs(1)"
+    └─ [32m←[0m ()
+
+[32m[PASS][0m testErrorStringConstantLong() (gas: 4227)
+Traces:
+
+  [4227] [32mContractErrorsTest[0m::[32mtestErrorStringConstantLong[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(ConstantErrorString)
+    │   └─ [34m←[0m ()
+    ├─ [590] [31mContractErrors[0m::[31merrorStringConstantLong[0m()
+    │   └─ [31m←[0m "ConstantErrorString"
+    └─ [32m←[0m ()
+
+[32m[PASS][0m testErrorStringConstantShort() (gas: 4602)
+Traces:
+
+  [4602] [32mContractErrorsTest[0m::[32mtestErrorStringConstantShort[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(E)
+    │   └─ [34m←[0m ()
+    ├─ [591] [31mContractErrors[0m::[31merrorStringConstantShort[0m()
+    │   └─ [31m←[0m "E"
+    └─ [32m←[0m ()
+
+[32m[PASS][0m testErrorStringLong() (gas: 3861)
+Traces:
+
+  [3861] [32mContractErrorsTest[0m::[32mtestErrorStringLong[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(ThisIsAVeryDescriptiveError)
+    │   └─ [34m←[0m ()
+    ├─ [274] [31mContractErrors[0m::[31merrorStringLong[0m()
+    │   └─ [31m←[0m "ThisIsAVeryDescriptiveError"
+    └─ [32m←[0m ()
+
+[32m[PASS][0m testErrorStringShort() (gas: 3938)
+Traces:
+
+  [3938] [32mContractErrorsTest[0m::[32mtestErrorStringShort[0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m(ErrorString)
+    │   └─ [34m←[0m ()
+    ├─ [346] [31mContractErrors[0m::[31merrorStringShort[0m()
+    │   └─ [31m←[0m "ErrorString"
     └─ [32m←[0m ()
 

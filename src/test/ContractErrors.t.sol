@@ -20,6 +20,10 @@ contract ContractErrorsTest is DSTest {
         implementation = new ContractErrors();
     }
 
+    //
+    // --- gas size checks
+    //
+
     function testErrorStringShort() public {
         vm.expectRevert("ErrorString");
         implementation.errorStringShort();
@@ -44,28 +48,39 @@ contract ContractErrorsTest is DSTest {
         implementation.errorStringConstantLong();
     }
 
-    function testErrorSolidity() public {
+    function testErrorCustom() public {
         vm.expectRevert(abi.encodeWithSignature("NoArgs()"));
-        implementation.errorSolidity();
+        implementation.errorCustom();
     }
 
-    function testErrorSolidityArgsShort() public {
+    function testErrorCustomArgsShort() public {
         uint256 shortNumber = 1;
         vm.expectRevert(
             abi.encodeWithSignature("WithArgs(uint256)", shortNumber)
         );
-        implementation.errorSolidityArgs(shortNumber);
+        implementation.errorCustomArgs(shortNumber);
     }
 
-    function testErrorSolidityArgsLong() public {
+    function testErrorCustomArgsLong() public {
         uint256 longNumber = 123456;
         vm.expectRevert(
             abi.encodeWithSignature("WithArgs(uint256)", longNumber)
         );
-        implementation.errorSolidityArgs(longNumber);
+        implementation.errorCustomArgs(longNumber);
     }
 
-    function testParseErrorWhenString() public {
+    //
+    // --- direct calls to parseError tests
+    //
+
+    function testDirectParseErrorWhenEmptyRevert() public {
+        bytes memory emptyError = new bytes(0);
+        vm.expectRevert(emptyError);
+
+        implementation.parseError(emptyError);
+    }
+
+    function testDirectParseErrorWhenString() public {
         string memory errorReason = "PEW: lasers";
         bytes memory errorString = abi.encodeWithSignature(
             "Error(string)",
@@ -76,7 +91,18 @@ contract ContractErrorsTest is DSTest {
         implementation.parseError(errorString);
     }
 
-    function testParseErrorWhenCustomError() public {
+    function testDirectParseErrorWhenPanic() public {
+        uint256 panicCode = 0x01;
+        bytes memory panicError = abi.encodeWithSignature(
+            "Panic(uint256)",
+            panicCode
+        );
+        vm.expectRevert(abi.encodePacked(panicError));
+
+        implementation.parseError(panicError);
+    }
+
+    function testDirectParseErrorWhenCustomError() public {
         bytes memory customError = abi.encodeWithSignature(
             "LaserStats(string, uint256, string)",
             "BFG",
@@ -88,10 +114,45 @@ contract ContractErrorsTest is DSTest {
         implementation.parseError(customError);
     }
 
-    function testParseEmptyRevert() public {
+    //
+    // --- contract calls to parseError tests
+    //
+
+    function testCallWithEmptyRevert() public {
         bytes memory emptyError = new bytes(0);
         vm.expectRevert(emptyError);
 
-        implementation.parseErrorEmptyRevert();
+        implementation.callWithEmptyRevert();
+    }
+
+    function testCallWithErrorString() public {
+        string memory errorReason = "boom";
+        bytes memory errorString = abi.encodeWithSignature(
+            "Error(string)",
+            errorReason
+        );
+        vm.expectRevert(abi.encodePacked(errorReason));
+
+        implementation.callWithErrorString();
+    }
+
+    function testCallWithPanic() public {
+        uint256 panicCode = 0x01;
+        bytes memory panicError = abi.encodeWithSignature(
+            "Panic(uint256)",
+            panicCode
+        );
+        vm.expectRevert(abi.encodePacked(panicError));
+
+        implementation.parseError(panicError);
+    }
+
+    function testCallWithCustomError() public {
+        bytes memory customError = abi.encodeWithSignature(
+            "CrashBoomBang()"
+        );
+        vm.expectRevert(customError);
+
+        implementation.callWithCustomError();
     }
 }
